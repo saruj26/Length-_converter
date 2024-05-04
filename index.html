@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id ="wrapper">
+        <h2>Kilometer to meter</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="length in km">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">Covert to meters</button>
+        </div>
+        <div id="result">
+
+        </div>
+        <script>
+            function convert(){
+            let kmVal=Number(document.getElementById("input").value);
+            let meterVal=kmVal*1000;
+            let result=document.getElementById("result");
+            result.innerHTML=meterVal.toFixed(2)+" meter";
+            } 
+           
+        </script>
+    </div>
+    
+</body>
+</html>
